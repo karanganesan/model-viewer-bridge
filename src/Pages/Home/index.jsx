@@ -1,9 +1,11 @@
 import React from "react";
+import Github from "../../Components/Github";
 import "./index.css";
 
 const Home = () => {
   return (
     <div className="home">
+      <Github></Github>
       <h1 className="title">Model Viewer Bridge</h1>
       <p className="sub-title">
         An easy to use bridge between your 3D models on desktop <br /> and 3D
@@ -16,7 +18,7 @@ const Home = () => {
         alt="computer to mobile bridge"
       ></img>
 
-      <p className="features">
+      <div className="features">
         <ul>
           <li>No account, no installation</li>
           <li>Models never saved on any servers</li>
@@ -26,7 +28,7 @@ const Home = () => {
           </li>
           <li>Supports gltf binary format 3d model</li>
         </ul>
-      </p>
+      </div>
 
       <a className="drop" href="/drop">
         <p>Start</p>

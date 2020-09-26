@@ -11,6 +11,7 @@ const Drop = () => {
 
   const [pipingServerId, setPipingServerId] = useState("");
   const [loadingVisibility, setLoadingVisibility] = useState(false);
+  const [creditsVisibility, setCreditsVisibility] = useState(true);
 
   useEffect(() => {
     const options = {
@@ -24,6 +25,10 @@ const Drop = () => {
 
   const sendBlob = async (blob) => {
     if (blob.name.includes(".glb")) {
+      if (creditsVisibility) {
+        setCreditsVisibility(false);
+      }
+
       modelRef.current.src = URL.createObjectURL(blob);
       setLoadingVisibility(true);
       await fetch("https://ppng.io/MVB-" + pipingServerId, {
@@ -120,6 +125,22 @@ const Drop = () => {
           </li>
         </ol>
       </details>
+
+      <div
+        className="credits"
+        style={{
+          display: creditsVisibility ? "" : "none",
+        }}
+      >
+        Astronaut by{" "}
+        <a
+          href="https://poly.google.com/user/4aEd8rQgKu2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google Poly
+        </a>
+      </div>
     </div>
   );
 };

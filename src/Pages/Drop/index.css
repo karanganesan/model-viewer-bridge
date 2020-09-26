@@ -51,3 +51,10 @@
 .drop > .help-details summary:focus {
   outline: none;
 }
+
+.drop > .credits {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
