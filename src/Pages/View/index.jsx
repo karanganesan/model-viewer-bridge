@@ -8,20 +8,24 @@ const View = () => {
   const [src, setSrc] = useState(null);
 
   useEffect(() => {
-    const { id } = params;
-    (() => {
-      setInterval(async () => {
-        try {
-          const response = await fetch("https://ppng.io/" + id);
-          const blob = await response.blob();
-          setSrc(URL.createObjectURL(blob));
-        } catch (error) {
-          // bad request
-          console.error(error);
-        }
-      }, 5000);
-    })();
     document.title = "model-viewer: View Page";
+    const { id } = params;
+
+    (async () => {
+      try {
+        let response = await fetch("https://ppng.io/" + id);
+        const blob = await response.blob();
+        if (typeof blob === "object" && blob.type === "model/gltf+json") {
+          console.log("hey");
+          setSrc(URL.createObjectURL(blob));
+        }
+      } catch (error) {
+        // bad request
+        console.error(error);
+      }
+    })();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params]);
   return (
     <div className="view">
