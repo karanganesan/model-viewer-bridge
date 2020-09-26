@@ -95,9 +95,7 @@ const Drop = () => {
           <p>{pipingServerId}</p>
         </a>
       </div>
-      <div>
-        <Loading visible={loadingVisibility}></Loading>
-      </div>
+      <Loading visible={loadingVisibility}></Loading>
     </div>
   );
 };

@@ -16,7 +16,6 @@ const View = () => {
         let response = await fetch("https://ppng.io/" + id);
         const blob = await response.blob();
         if (typeof blob === "object" && blob.type === "model/gltf+json") {
-          console.log("hey");
           setSrc(URL.createObjectURL(blob));
         }
       } catch (error) {
