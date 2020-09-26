@@ -9,16 +9,17 @@ const View = () => {
 
   useEffect(() => {
     const { id } = params;
-    (async () => {
-      while (true) {
+    (() => {
+      setInterval(async () => {
         try {
           const response = await fetch("https://ppng.io/" + id);
           const blob = await response.blob();
           setSrc(URL.createObjectURL(blob));
         } catch (error) {
+          // bad request
           console.error(error);
         }
-      }
+      }, 5000);
     })();
     document.title = "model-viewer: View Page";
   }, [params]);
