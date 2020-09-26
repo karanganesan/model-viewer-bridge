@@ -1,0 +1,43 @@
+.drop {
+  width: 100%;
+  height: 100%;
+}
+
+.drop > model-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+.drop > .title {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 200%;
+}
+
+.drop > .sub-title {
+  position: absolute;
+  left: 20px;
+  top: 60px;
+  font-size: 100%;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.drop > .qr-code {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.drop > .qr-code > .url {
+  margin-top: 10px;
+}
+
+.drop > .hidden-input {
+  display: none;
+}
