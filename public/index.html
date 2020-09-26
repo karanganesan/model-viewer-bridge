@@ -1,6 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="/assets/icon.svg" type="image/svg" />
+
+    <!-- Primary Meta Tags -->
+    <title>Model Viewer Bridge</title>
+    <meta name="title" content="Model Viewer Bridge" />
+    <meta
+      name="description"
+      content="A bridge between desktop view and AR view of a 3D model"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://model-viewer-bridge.karanganesan.com/"
+    />
+    <meta property="og:title" content="Model Viewer Bridge" />
+    <meta
+      property="og:description"
+      content="A bridge between desktop view and AR view of a 3D model"
+    />
+    <meta property="og:image" content="https://i.imgur.com/aurpANv.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://model-viewer-bridge.karanganesan.com/"
+    />
+    <meta property="twitter:title" content="Model Viewer Bridge" />
+    <meta
+      property="twitter:description"
+      content="A bridge between desktop view and AR view of a 3D model"
+    />
+    <meta property="twitter:image" content="https://i.imgur.com/aurpANv.png" />
+
     <script
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
@@ -9,29 +48,9 @@
       nomodule
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
     ></script>
-
-    <meta charset="utf-8" />
-    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="A bridge between desktop view and AR view of a 3D model"
-    />
-    <title>Model Viewer Bridge</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
