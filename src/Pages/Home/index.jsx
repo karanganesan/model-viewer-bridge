@@ -18,8 +18,8 @@ const Home = () => {
 
       <p className="features">
         <ul>
-          <li>No account needed</li>
-          <li>Models are not stored in any server</li>
+          <li>No account, no installation</li>
+          <li>Models never saved on any servers</li>
           <li>
             View in Augmented Reality using WebXR-compatible browser / Android
             Scene Viewer

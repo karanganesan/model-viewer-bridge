@@ -41,3 +41,13 @@
 .drop > .hidden-input {
   display: none;
 }
+
+.drop > .help-details {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+.drop > .help-details summary:focus {
+  outline: none;
+}

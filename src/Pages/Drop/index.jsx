@@ -7,6 +7,7 @@ import Loading from "../../Components/Loading";
 const Drop = () => {
   const modelRef = useRef(null);
   const inputRef = useRef(null);
+  const detailsRef = useRef(null);
 
   const [pipingServerId, setPipingServerId] = useState("");
   const [loadingVisibility, setLoadingVisibility] = useState(false);
@@ -25,7 +26,7 @@ const Drop = () => {
     if (blob.name.includes(".glb")) {
       modelRef.current.src = URL.createObjectURL(blob);
       setLoadingVisibility(true);
-      await fetch("https://ppng.io/" + pipingServerId, {
+      await fetch("https://ppng.io/MVB-" + pipingServerId, {
         method: "POST",
         body: blob,
       });
@@ -47,6 +48,12 @@ const Drop = () => {
     sendBlob(blob);
   };
 
+  const dismissDetails = () => {
+    if (detailsRef.current.hasAttribute("open")) {
+      detailsRef.current.removeAttribute("open");
+    }
+  };
+
   return (
     <div
       className="drop"
@@ -56,6 +63,7 @@ const Drop = () => {
         e.preventDefault();
         e.dataTransfer.dropEffect = "copy";
       }}
+      onClick={dismissDetails}
     >
       <input
         ref={inputRef}
@@ -96,6 +104,22 @@ const Drop = () => {
         </a>
       </div>
       <Loading visible={loadingVisibility}></Loading>
+
+      <details className="help-details" ref={detailsRef}>
+        <summary>Help</summary>
+        <ol>
+          <li>
+            Scan the QR Code / open the view link <br /> on top right corner on
+            your mobile
+          </li>
+          <li>Drop the glb file anywhere on the page</li>
+          <li>Check your mobile page to view</li>
+          <li>
+            You can also use the same links to drop <br /> another model and
+            view the same in mobile
+          </li>
+        </ol>
+      </details>
     </div>
   );
 };
