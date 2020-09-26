@@ -2,6 +2,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 100%;
+}
+
+.home > .image {
+  height: 40%;
+  margin: 35px;
+}
+
+.home > .title {
+  font-size: 40px;
+}
+
+.home > .sub-title {
+  margin-top: 7.5px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.home > .features {
+  font-size: 15px;
+}
+
+.home > .drop {
+  margin-top: 30px;
+  text-decoration: none;
+  color: black;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.home > .drop h1 {
+  font-weight: 300;
 }

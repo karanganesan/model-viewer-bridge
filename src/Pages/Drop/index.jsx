@@ -18,7 +18,7 @@ const Drop = () => {
     };
     const id = meaningful(options);
     setPipingServerId(id.toLowerCase());
-    document.title = "model-viewer: Drop Page";
+    document.title = "Drop Page";
   }, []);
 
   const sendBlob = async (blob) => {

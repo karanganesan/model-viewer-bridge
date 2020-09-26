@@ -8,7 +8,7 @@ const View = () => {
   const [src, setSrc] = useState(null);
 
   useEffect(() => {
-    document.title = "model-viewer: View Page";
+    document.title = "View Page";
     const { id } = params;
 
     (async () => {
