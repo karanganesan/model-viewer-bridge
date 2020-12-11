@@ -15,4 +15,4 @@ Made using
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d5b98d35-30ee-4d9e-8873-9ebfadc3211a/deploy-status)](https://app.netlify.com/sites/model-viewer-bridge/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bc45393e-b35e-4f02-a6f5-8d559f861627/deploy-status)](https://app.netlify.com/sites/model-viewer-bridge/deploys)
